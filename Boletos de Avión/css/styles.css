@@ -1,0 +1,42 @@
+body{
+    background-image: url(/css/img/images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+.error-message {
+    color: rgb(250, 250, 250);
+    margin-top: 5px;
+    font-size: 2rem;
+}
+
+.mt-3{
+    color: rgb(250, 250, 250);
+    margin-top: 5px;
+    font-size: 2rem;
+    background-color: rgb(50, 88, 255);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.list-group{
+    font-size: 1.4rem;
+    color: white;
+    background-color: rgb(50, 88, 255);
+    width: 350px;
+    align-items: center;
+    
+}

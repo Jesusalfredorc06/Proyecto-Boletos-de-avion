@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletos de Avión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="container">
+        <h1>Boletos de Avión</h1>
+    </header>
+
+    <main class="container">
+        <h2>Selecciona un vuelo:</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Destino</th>
+                    <th>Reservar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-04-15</td>
+                    <td>08:00 AM</td>
+                    <td>New York</td>
+                    <td><button class="btn btn-primary" onclick="reserveFlight('2024-04-15', '08:00 AM', 'New York')">Reservar</button></td>
+                </tr>
+                <tr>
+                    <td>2024-04-16</td>
+                    <td>10:00 AM</td>
+                    <td>Los Angeles</td>
+                    <td><button class="btn btn-primary" onclick="reserveFlight('2024-04-16', '10:00 AM', 'Los Angeles')">Reservar</button></td>
+                </tr>
+                <tr>
+                    <td>2024-04-17</td>
+                    <td>12:00 PM</td>
+                    <td>Londres</td>
+                    <td><button class="btn btn-primary" onclick="reserveFlight('2024-04-17', '12:00 PM', 'Londres')">Reservar</button></td>
+                </tr>
+                <tr>
+                    <td>2024-05-10</td>
+                    <td>11:00 AM</td>
+                    <td>Japón</td>
+                    <td><button class="btn btn-primary" onclick="reserveFlight('2024-05-10', '11:00 AM', 'Japón')">Reservar</button></td>
+                </tr>
+                <tr>
+                    <td>2024-05-15</td>
+                    <td>02:00 PM</td>
+                    <td>Italia</td>
+                    <td><button class="btn btn-primary" onclick="reserveFlight('2024-05-15', '02:00 PM', 'Italia')">Reservar</button></td>
+                </tr>
+                <tr>
+                    <td>2024-06-01</td>
+                    <td>05:00 PM</td>
+                    <td>España</td>
+                    <td><button class="btn btn-primary" onclick="reserveFlight('2024-06-01', '05:00 PM', 'España')">Reservar</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="reservationForm" style="display:none;">
+            <h2>Ingresa tu cédula para reservar:</h2>
+            <input type="text" id="cedulaInput" class="form-control col-6">
+            <button class="btn btn-primary mt-2" onclick="confirmReservation()">Confirmar Reservación</button>
+            <div class="spinner-border text-primary mt-2" style="display: none;" role="status" id="spinner">
+                <span class="visually-hidden">Reservando su vuelo...</span>
+            </div>
+        </div>
+        
+        <div id="reservationMessage" class="mt-3"></div>
+        <div id="cedulaError" class="error-message"></div>
+        
+        <h3>Vuelos reservados:</h3>
+        <input type="text" id="cedulaReservation" class="form-control mb-2" placeholder="Ingresa tu cédula">
+        <button class="btn btn-primary mb-2" onclick="loadReservedFlights()">Ver Vuelos Reservados</button>
+        <div id="cedulaError2" class="error-message"></div>
+        <div id="noReservationsMessage" class="error-message"></div>
+        <ul id="reservedFlightsList" class="list-group"></ul>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
+
+
